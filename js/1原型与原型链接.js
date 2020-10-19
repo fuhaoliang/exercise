@@ -1,6 +1,8 @@
 //https://juejin.im/post/6844903922138611725
 //https://zhuanlan.zhihu.com/p/50494009
 
+
+// 在js中万物皆对象，方法(Function)是对象，方法的原型（Function.prototype）是对象，对象具有属性（__proto__）称为隐式原型，对象的隐式原型指向构造该对象的构造函数的显式原型。
 // JavaScript是基于原型的语言，因此语言本身至少要提供一个根对象，JavaScript根对象是 Object.prototype
 // （有的人说跟对象是null，因为Object.prototype.__proto__为null，Object.prototype也是一个对象，只不过它是一个空的对象。）
 // （记住一点：所有的原型都是对象，但不是函数，虽然函数也是对象，Object其实就是一个函数，而Object.prototype是一个对象）
