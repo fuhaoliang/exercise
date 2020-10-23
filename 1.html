@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .surround-box,
+    .center-point{
+        position: absolute;
+        top:  50%;
+        left: 50%;
+        width:  20px;
+        height:  20px;
+        margin-left: -10px;
+        margin-top: -10px;
+        border-radius: 50%;
+        background-color: #000;
+
+    }
+    .circle{
+        /* 这里一定要绝对定位，这样位置才能铺开来 */
+        position: absolute;
+        top:  -10px;
+        left: -10px;
+        width: 40px;
+        height:  40px;
+        line-height: 40px;
+        border-radius:  50%;
+        text-align: center;
+        color: #fff;
+    }
+    .surround-box{
+      animation:spin 2s linear infinite;
+    }
+    @keyframes spin { 
+      from {transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+   
+    .circle1{
+        background-color: red;
+        /* rotateZ控制方向，每个元素旋转30度，12个元素刚好360度。translateY控制每个元素距中心点的距离 */
+        transform: rotateZ(30deg) translateY(80px);
+    }
+    .circle2{
+        background-color: orange;
+        transform: rotateZ(60deg) translateY(80px);
+    }
+    .circle3{
+        background-color: yellow;
+        transform: rotateZ(90deg) translateY(80px);
+    }
+    .circle4{
+        background-color: green;
+        transform: rotateZ(120deg) translateY(80px);
+    }
+    .circle5{
+        background-color: seagreen;
+        transform: rotateZ(150deg) translateY(80px);
+    }
+    .circle6{
+        background-color: blue;
+        transform: rotateZ(180deg) translateY(80px);
+    }
+    .circle7{
+        background-color: purple;
+        transform: rotateZ(210deg) translateY(80px);
+    }
+    .circle8{
+        background-color: lightsalmon;
+        transform: rotateZ(240deg) translateY(80px);
+    }
+    .circle9{
+        background-color: deeppink;
+        transform: rotateZ(270deg) translateY(80px);
+    }
+    .circle10{
+        background-color: lightyellow;
+        transform: rotateZ(300deg) translateY(80px);
+    }
+    .circle11{
+        background-color: lightgreen;
+        transform: rotateZ(330deg) translateY(80px);
+    }
+    .circle12{
+        background-color: lightslategrey;
+        transform: rotateZ(360deg) translateY(80px);
+    }
+</style>
+<body>
+  <div class="center-point"></div>
+  <div class="surround-box">
+      <div class="circle circle1">1</div>
+      <div class="circle circle2">2</div>
+      <div class="circle circle3">3</div>
+      <div class="circle circle4">4</div>
+      <div class="circle circle5">5</div>
+      <div class="circle circle6">6</div>
+      <div class="circle circle7">7</div>
+      <div class="circle circle8">8</div>
+      <div class="circle circle9">9</div>
+      <div class="circle circle10">10</div>
+      <div class="circle circle11">11</div>
+      <div class="circle circle12">12</div>
+  </div>
+</body>
+<script>
+  // var data = [{
+  //               "id": "94",
+  //               "name": "上海豫园区",
+  //               "type": "channel",
+  //               "children": [
+  //                   {
+  //                     "id": "154",
+  //                     "name": "老庙福佑店",
+  //                     "type": "store",
+  //                     "storeId": "154"
+  //                   },
+  //                   {
+  //                     "id": "1126",
+  //                     "name": "老庙南东店",
+  //                     "type": "store",
+  //                     "storeId": "1126"
+  //                   },
+  //                   {
+  //                     "id": "1204",
+  //                     "name": "老庙紫锦城专柜",
+  //                     "type": "store",
+  //                     "storeId": "1204"
+  //                   },
+  //                   {
+  //                     "id": "1203",
+  //                     "name": "老庙置地广场店",
+  //                     "type": "store",
+  //                     "storeId": "1203"
+  //                   }
+  //                 ]
+  //               },
+  //               {
+  //                 "id": "215",
+  //                 "name": "景荣楼区",
+  //                 "type": "channel",
+  //                 "children": [
+  //                     {
+  //                       "id": "1127",
+  //                       "name": "老庙豫园总店",
+  //                       "type": "store",
+  //                       "storeId": "1127"
+  //                     },
+  //                     {
+  //                       "id": "1425",
+  //                       "name": "老庙豫园老街古韵店",
+  //                       "type": "store",
+  //                       "storeId": "1425"
+  //                     }
+  //                   ]
+  //               }
+  //             ]
+
+  // const fn = (dataArr, id) => {
+  //   for(let item of dataArr) {
+  //     if(item.id === id){
+  //       return item
+  //     } else if (item.children && item.children.length > 0) {
+  //       var s = fn(item.children, id) 
+  //       if (s) return s
+  //     }
+  //   }
+  // }
+
+  // var a = fn(data, '1127')
+  // console.info(a)
+</script>
+</html>

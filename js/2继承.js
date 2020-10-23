@@ -86,7 +86,8 @@ function Obj(type){
   this.type = type
 }
 
-Obj.prototype = Object.create()
+Obj.prototype = Object.create(fun.prototype)
+Obj.prototype.constr
 
 
 
